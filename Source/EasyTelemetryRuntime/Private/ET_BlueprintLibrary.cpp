@@ -2,13 +2,14 @@
 
 
 #include "ET_BlueprintLibrary.h"
+#include "Engine/GameInstance.h"
 
 #include "EasyTelemetrySubsystem.h"
-#include "VectorTypes.h"
+
 
 void UET_BlueprintLibrary::TrackCharacter(const UObject* WorldContextObject, ACharacter* Character)
 {
-	UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::ReturnNull);
+	UWorld* World = WorldContextObject->GetWorld();
 	UGameInstance* GameInstance = World->GetGameInstance();
 
 	UEasyTelemetrySubsystem* Subsystem = GameInstance->GetSubsystem<UEasyTelemetrySubsystem>();
@@ -18,7 +19,7 @@ void UET_BlueprintLibrary::TrackCharacter(const UObject* WorldContextObject, ACh
 
 void UET_BlueprintLibrary::TrackMechanic(const UObject* WorldContextObject, ACharacter* Character, FString Mechanic, FLinearColor Color)
 {
-	UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::ReturnNull);
+	UWorld* World = WorldContextObject->GetWorld();
 	UGameInstance* GameInstance = World->GetGameInstance();
 
 	UEasyTelemetrySubsystem* Subsystem = GameInstance->GetSubsystem<UEasyTelemetrySubsystem>();

@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/World.h"
+#include "GameFramework/Character.h"
 #include "ET_BlueprintLibrary.generated.h"
 
 /**

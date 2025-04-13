@@ -6,11 +6,8 @@
 #include "EditorSubsystem.h"
 #include "../Structures/EasyTelemetryStuct.h"
 #include "EasyTelemetry/Enum/EasyTelemetryEnum.h"
+#include "ETWidgets/ET_TelemetryWidget.h"
 #include "EasyTelemetryEditorSubsystem.generated.h"
-
-class UEasyTelemetrySettings;
-class UET_TelemetryWidget;
-class UEditorUtilityWidget;
 
 UCLASS()
 class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem

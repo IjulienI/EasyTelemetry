@@ -46,7 +46,6 @@ public class EasyTelemetry : ModuleRules
 				"UMGEditor",
 				"EditorScriptingUtilities",
 				"Blutility",
-				"UnrealEd",
 				"UMG",
 				"Json",
 				"JsonUtilities",

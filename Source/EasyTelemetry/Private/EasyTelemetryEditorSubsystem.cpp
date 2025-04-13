@@ -5,8 +5,16 @@
 
 #include "EasyTelemetrySettings.h"
 #include "Framework/Notifications/NotificationManager.h"
-#include "ETWidgets/ET_TelemetryWidget.h"
 #include "Widgets/Notifications/SNotificationList.h"
+#include "Misc/Paths.h"
+#include "EasyTelemetryRuntime/Structures/EasyTelemetryStuct.h"
+#include "DrawDebugHelpers.h"
+#include "Engine/World.h"
+#include "HAL/FileManager.h"
+#include "Misc/FileHelper.h"
+#include "Engine/Engine.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
 
 TSharedPtr<SNotificationItem> NotificationItem;
 

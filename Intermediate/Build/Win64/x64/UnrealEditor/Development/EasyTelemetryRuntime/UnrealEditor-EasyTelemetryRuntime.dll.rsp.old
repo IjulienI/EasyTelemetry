@@ -49,7 +49,6 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Json\UnrealEditor-Json.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\JsonUtilities\UnrealEditor-JsonUtilities.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\DeveloperSettings\UnrealEditor-DeveloperSettings.lib"
-"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\UnrealEditor-EasyTelemetry.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "delayimp.lib"
 "wininet.lib"

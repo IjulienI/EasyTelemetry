@@ -4,8 +4,16 @@
 #include "EasyTelemetrySubsystem.h"
 
 #include "EasyTelemetrySettings.h"
-#include "EasyTelemetryRuntime/Structures/EasyTelemetryStuct.h"
-#include "GameFramework/Character.h"
+#include "Dom/JsonObject.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
+#include "Policies/CondensedJsonPrintPolicy.h"
+#include "Dom/JsonValue.h"
+#include "Misc/Paths.h"
+#include "TimerManager.h"
+#include "Misc/FileHelper.h"
+#include "HAL/FileManager.h"
+
 
 void UEasyTelemetrySubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {

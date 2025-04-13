@@ -36,11 +36,13 @@ public class EasyTelemetryRuntime : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"Slate",
-				"SlateCore",
 				"Json",
 				"JsonUtilities",
 				"DeveloperSettings", 
+				"InputCore",
+				"RenderCore",
+				"RHI",
+				"Projects"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

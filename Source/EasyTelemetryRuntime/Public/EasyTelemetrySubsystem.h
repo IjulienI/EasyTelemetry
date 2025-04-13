@@ -4,10 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "EasyTelemetryRuntime/Structures/EasyTelemetryStuct.h"
+#include "GameFramework/Character.h"
+#include "Engine/World.h"
+#include "DrawDebugHelpers.h"
+
 #include "EasyTelemetrySubsystem.generated.h"
 
-struct FMechanic;
-struct FPlayerLocation;
 
 UCLASS()
 class EASYTELEMETRYRUNTIME_API UEasyTelemetrySubsystem : public UGameInstanceSubsystem
