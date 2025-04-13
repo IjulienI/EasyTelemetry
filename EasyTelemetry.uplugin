@@ -11,9 +11,12 @@
 	"MarketplaceURL": "",
 	"SupportURL": "",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
-	"IsExperimentalVersion": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
 	"Installed": false,
+	"SupportedTargetPlatforms": [
+		"Win64"
+	],
 	"Modules": [
 		{
 			"Name": "EasyTelemetry",
@@ -31,5 +34,5 @@
 			"Name": "EditorScriptingUtilities",
 			"Enabled": true
 		}
-	]
+	]	
 }

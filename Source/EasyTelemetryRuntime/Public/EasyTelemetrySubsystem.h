@@ -8,6 +8,7 @@
 #include "GameFramework/Character.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
+#include "Math/Color.h"
 
 #include "EasyTelemetrySubsystem.generated.h"
 

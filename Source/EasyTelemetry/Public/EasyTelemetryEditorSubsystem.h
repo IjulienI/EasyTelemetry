@@ -7,7 +7,10 @@
 #include "../Structures/EasyTelemetryStuct.h"
 #include "EasyTelemetry/Enum/EasyTelemetryEnum.h"
 #include "ETWidgets/ET_TelemetryWidget.h"
+#include "Math/Color.h"
+
 #include "EasyTelemetryEditorSubsystem.generated.h"
+
 
 UCLASS()
 class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem

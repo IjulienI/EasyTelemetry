@@ -14,6 +14,11 @@ void UET_BlueprintLibrary::TrackCharacter(const UObject* WorldContextObject, ACh
 
 	UEasyTelemetrySubsystem* Subsystem = GameInstance->GetSubsystem<UEasyTelemetrySubsystem>();
 
+	if (Character == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Character is null [Track Character]"));
+		return;
+	}
 	Subsystem->TrackCharacter(Character);
 }
 
@@ -24,5 +29,16 @@ void UET_BlueprintLibrary::TrackMechanic(const UObject* WorldContextObject, ACha
 
 	UEasyTelemetrySubsystem* Subsystem = GameInstance->GetSubsystem<UEasyTelemetrySubsystem>();
 
-	Subsystem->TrackMechanic(Character, Mechanic, Color.ToFColor(false));
+	if (Mechanic.IsEmpty())
+	{
+		UE_LOG(LogTemp, Error, TEXT("Mechanic have no name ! [TrackMechanic]"));
+		return;
+	}
+	
+	if (Character == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Character is null ! (Mechanic name : %s) [Track Mechanic]"), *Mechanic);
+		return;
+	}
+	Subsystem->TrackMechanic(Character, Mechanic, Color.ToFColor(true));
 }
