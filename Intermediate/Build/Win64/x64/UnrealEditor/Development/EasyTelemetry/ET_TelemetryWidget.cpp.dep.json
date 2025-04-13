@@ -41,6 +41,8 @@
             "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetryeditorsubsystem.h",
             "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\structures\\easytelemetrystuct.h",
             "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrystuct.generated.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetry\\enum\\easytelemetryenum.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryenum.generated.h",
             "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryeditorsubsystem.generated.h"
         ],
         "ImportedModules": [],

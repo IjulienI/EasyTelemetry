@@ -34,6 +34,9 @@ struct Z_Construct_UFunction_UET_BlueprintLibrary_TrackCharacter_Statics
 		{ "DisplayName", "Track Character" },
 		{ "Keyword", "TrackCharacter" },
 		{ "ModuleRelativePath", "Public/ET_BlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Starts tracking the specified character's location over time.\nLogged data will be saved automatically. \n\n Tips : You can modify the logIntervale from ProjectSettings -> EasyTelemetry -> LogIntervale" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[] = {
@@ -91,6 +94,9 @@ struct Z_Construct_UFunction_UET_BlueprintLibrary_TrackMechanic_Statics
 		{ "DisplayName", "Track Mechanic" },
 		{ "Keyword", "TrackMechanic" },
 		{ "ModuleRelativePath", "Public/ET_BlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Logs a gameplay mechanic event for the specified character with a visual color for editor visualization." },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[] = {
@@ -167,8 +173,8 @@ struct Z_Construct_UClass_UET_BlueprintLibrary_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UET_BlueprintLibrary_TrackCharacter, "TrackCharacter" }, // 478614390
-		{ &Z_Construct_UFunction_UET_BlueprintLibrary_TrackMechanic, "TrackMechanic" }, // 8427676
+		{ &Z_Construct_UFunction_UET_BlueprintLibrary_TrackCharacter, "TrackCharacter" }, // 163520062
+		{ &Z_Construct_UFunction_UET_BlueprintLibrary_TrackMechanic, "TrackMechanic" }, // 2876591270
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -217,10 +223,10 @@ UET_BlueprintLibrary::~UET_BlueprintLibrary() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_ET_BlueprintLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UET_BlueprintLibrary, UET_BlueprintLibrary::StaticClass, TEXT("UET_BlueprintLibrary"), &Z_Registration_Info_UClass_UET_BlueprintLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UET_BlueprintLibrary), 4053453258U) },
+		{ Z_Construct_UClass_UET_BlueprintLibrary, UET_BlueprintLibrary::StaticClass, TEXT("UET_BlueprintLibrary"), &Z_Registration_Info_UClass_UET_BlueprintLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UET_BlueprintLibrary), 1814012261U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_ET_BlueprintLibrary_h_2473772561(TEXT("/Script/EasyTelemetryRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_ET_BlueprintLibrary_h_3427288822(TEXT("/Script/EasyTelemetryRuntime"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_ET_BlueprintLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_ET_BlueprintLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

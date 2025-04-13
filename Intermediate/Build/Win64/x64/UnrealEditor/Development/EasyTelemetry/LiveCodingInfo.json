@@ -4,6 +4,7 @@
 		"Module.EasyTelemetry.cpp.obj": [
 			"EasyTelemetry.init.gen.cpp.obj",
 			"EasyTelemetryEditorSubsystem.gen.cpp.obj",
+			"EasyTelemetryEnum.gen.cpp.obj",
 			"ET_TelemetryWidget.gen.cpp.obj",
 			"EasyTelemetry.cpp.obj",
 			"EasyTelemetryCommands.cpp.obj",

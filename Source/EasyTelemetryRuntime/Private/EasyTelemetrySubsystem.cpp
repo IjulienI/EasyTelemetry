@@ -3,6 +3,7 @@
 
 #include "EasyTelemetrySubsystem.h"
 
+#include "EasyTelemetrySettings.h"
 #include "EasyTelemetryRuntime/Structures/EasyTelemetryStuct.h"
 #include "GameFramework/Character.h"
 
@@ -39,7 +40,8 @@ void UEasyTelemetrySubsystem::HandlePostWorldInit(UWorld* World, const UWorld::I
 
 void UEasyTelemetrySubsystem::OnWorldBeginPlay()
 {
-	mWorld->GetTimerManager().SetTimer(PlayerLocationTimer, this, &UEasyTelemetrySubsystem::LogPlayersLocation, 0.5f, true);
+	float Intervale = GetDefault<UEasyTelemetrySettings>()->LogInterval;
+	mWorld->GetTimerManager().SetTimer(PlayerLocationTimer, this, &UEasyTelemetrySubsystem::LogPlayersLocation, Intervale, true);
 }
 
 void UEasyTelemetrySubsystem::LogPlayersLocation()

@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeEasyTelemetryEditorSubsystem() {}
 EASYTELEMETRY_API UClass* Z_Construct_UClass_UEasyTelemetryEditorSubsystem();
 EASYTELEMETRY_API UClass* Z_Construct_UClass_UEasyTelemetryEditorSubsystem_NoRegister();
 EASYTELEMETRY_API UClass* Z_Construct_UClass_UET_TelemetryWidget_NoRegister();
+EASYTELEMETRY_API UEnum* Z_Construct_UEnum_EasyTelemetry_DrawType();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTrack();
 EDITORSUBSYSTEM_API UClass* Z_Construct_UClass_UEditorSubsystem();
 UPackage* Z_Construct_UPackage__Script_EasyTelemetry();
@@ -298,6 +299,178 @@ DEFINE_FUNCTION(UEasyTelemetryEditorSubsystem::execLoadData)
 }
 // End Class UEasyTelemetryEditorSubsystem Function LoadData
 
+// Begin Class UEasyTelemetryEditorSubsystem Function RefreshSettings
+struct Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EasyTelemetry|Tracking" },
+		{ "ModuleRelativePath", "Public/EasyTelemetryEditorSubsystem.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEasyTelemetryEditorSubsystem, nullptr, "RefreshSettings", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEasyTelemetryEditorSubsystem::execRefreshSettings)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RefreshSettings();
+	P_NATIVE_END;
+}
+// End Class UEasyTelemetryEditorSubsystem Function RefreshSettings
+
+// Begin Class UEasyTelemetryEditorSubsystem Function SetDraw
+struct Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics
+{
+	struct EasyTelemetryEditorSubsystem_eventSetDraw_Parms
+	{
+		bool pDraw;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EasyTelemetry|Tracking" },
+		{ "ModuleRelativePath", "Public/EasyTelemetryEditorSubsystem.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_pDraw_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_pDraw;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::NewProp_pDraw_SetBit(void* Obj)
+{
+	((EasyTelemetryEditorSubsystem_eventSetDraw_Parms*)Obj)->pDraw = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::NewProp_pDraw = { "pDraw", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(EasyTelemetryEditorSubsystem_eventSetDraw_Parms), &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::NewProp_pDraw_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::NewProp_pDraw,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEasyTelemetryEditorSubsystem, nullptr, "SetDraw", nullptr, nullptr, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::EasyTelemetryEditorSubsystem_eventSetDraw_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::EasyTelemetryEditorSubsystem_eventSetDraw_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEasyTelemetryEditorSubsystem::execSetDraw)
+{
+	P_GET_UBOOL(Z_Param_pDraw);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDraw(Z_Param_pDraw);
+	P_NATIVE_END;
+}
+// End Class UEasyTelemetryEditorSubsystem Function SetDraw
+
+// Begin Class UEasyTelemetryEditorSubsystem Function SetDrawHeat
+struct Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics
+{
+	struct EasyTelemetryEditorSubsystem_eventSetDrawHeat_Parms
+	{
+		bool pDrawHeat;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EasyTelemetry|Tracking" },
+		{ "ModuleRelativePath", "Public/EasyTelemetryEditorSubsystem.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_pDrawHeat_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_pDrawHeat;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::NewProp_pDrawHeat_SetBit(void* Obj)
+{
+	((EasyTelemetryEditorSubsystem_eventSetDrawHeat_Parms*)Obj)->pDrawHeat = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::NewProp_pDrawHeat = { "pDrawHeat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(EasyTelemetryEditorSubsystem_eventSetDrawHeat_Parms), &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::NewProp_pDrawHeat_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::NewProp_pDrawHeat,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEasyTelemetryEditorSubsystem, nullptr, "SetDrawHeat", nullptr, nullptr, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::EasyTelemetryEditorSubsystem_eventSetDrawHeat_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::EasyTelemetryEditorSubsystem_eventSetDrawHeat_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEasyTelemetryEditorSubsystem::execSetDrawHeat)
+{
+	P_GET_UBOOL(Z_Param_pDrawHeat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDrawHeat(Z_Param_pDrawHeat);
+	P_NATIVE_END;
+}
+// End Class UEasyTelemetryEditorSubsystem Function SetDrawHeat
+
+// Begin Class UEasyTelemetryEditorSubsystem Function SetDrawType
+struct Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics
+{
+	struct EasyTelemetryEditorSubsystem_eventSetDrawType_Parms
+	{
+		DrawType DrawType;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EasyTelemetry|Tracking" },
+		{ "ModuleRelativePath", "Public/EasyTelemetryEditorSubsystem.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_DrawType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_DrawType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::NewProp_DrawType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::NewProp_DrawType = { "DrawType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EasyTelemetryEditorSubsystem_eventSetDrawType_Parms, DrawType), Z_Construct_UEnum_EasyTelemetry_DrawType, METADATA_PARAMS(0, nullptr) }; // 2788897021
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::NewProp_DrawType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::NewProp_DrawType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEasyTelemetryEditorSubsystem, nullptr, "SetDrawType", nullptr, nullptr, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::EasyTelemetryEditorSubsystem_eventSetDrawType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::EasyTelemetryEditorSubsystem_eventSetDrawType_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEasyTelemetryEditorSubsystem::execSetDrawType)
+{
+	P_GET_ENUM(DrawType,Z_Param_DrawType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDrawType(DrawType(Z_Param_DrawType));
+	P_NATIVE_END;
+}
+// End Class UEasyTelemetryEditorSubsystem Function SetDrawType
+
 // Begin Class UEasyTelemetryEditorSubsystem Function SetTime
 struct Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetTime_Statics
 {
@@ -353,6 +526,10 @@ void UEasyTelemetryEditorSubsystem::StaticRegisterNativesUEasyTelemetryEditorSub
 		{ "GetMaxTime", &UEasyTelemetryEditorSubsystem::execGetMaxTime },
 		{ "GetTracks", &UEasyTelemetryEditorSubsystem::execGetTracks },
 		{ "LoadData", &UEasyTelemetryEditorSubsystem::execLoadData },
+		{ "RefreshSettings", &UEasyTelemetryEditorSubsystem::execRefreshSettings },
+		{ "SetDraw", &UEasyTelemetryEditorSubsystem::execSetDraw },
+		{ "SetDrawHeat", &UEasyTelemetryEditorSubsystem::execSetDrawHeat },
+		{ "SetDrawType", &UEasyTelemetryEditorSubsystem::execSetDrawType },
 		{ "SetTime", &UEasyTelemetryEditorSubsystem::execSetTime },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -391,6 +568,10 @@ struct Z_Construct_UClass_UEasyTelemetryEditorSubsystem_Statics
 		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_GetMaxTime, "GetMaxTime" }, // 2243377585
 		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_GetTracks, "GetTracks" }, // 2740967326
 		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_LoadData, "LoadData" }, // 1792760329
+		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_RefreshSettings, "RefreshSettings" }, // 3520087571
+		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDraw, "SetDraw" }, // 58265962
+		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawHeat, "SetDrawHeat" }, // 3085801146
+		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetDrawType, "SetDrawType" }, // 1115171246
 		{ &Z_Construct_UFunction_UEasyTelemetryEditorSubsystem_SetTime, "SetTime" }, // 2931105607
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -453,10 +634,10 @@ UEasyTelemetryEditorSubsystem::~UEasyTelemetryEditorSubsystem() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEasyTelemetryEditorSubsystem, UEasyTelemetryEditorSubsystem::StaticClass, TEXT("UEasyTelemetryEditorSubsystem"), &Z_Registration_Info_UClass_UEasyTelemetryEditorSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEasyTelemetryEditorSubsystem), 3402750592U) },
+		{ Z_Construct_UClass_UEasyTelemetryEditorSubsystem, UEasyTelemetryEditorSubsystem::StaticClass, TEXT("UEasyTelemetryEditorSubsystem"), &Z_Registration_Info_UClass_UEasyTelemetryEditorSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEasyTelemetryEditorSubsystem), 1803616700U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_3783964466(TEXT("/Script/EasyTelemetry"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_304330307(TEXT("/Script/EasyTelemetry"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

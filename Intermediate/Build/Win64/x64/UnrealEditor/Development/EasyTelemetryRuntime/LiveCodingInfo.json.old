@@ -5,8 +5,10 @@
 			"EasyTelemetryRuntime.init.gen.cpp.obj",
 			"EasyTelemetryStuct.gen.cpp.obj",
 			"EasyTelemetrySubsystem.gen.cpp.obj",
+			"ET_BlueprintLibrary.gen.cpp.obj",
 			"EasyTelemetryRuntime.cpp.obj",
-			"EasyTelemetrySubsystem.cpp.obj"
+			"EasyTelemetrySubsystem.cpp.obj",
+			"ET_BlueprintLibrary.cpp.obj"
 		]
 	}
 }

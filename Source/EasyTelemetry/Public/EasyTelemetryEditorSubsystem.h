@@ -5,8 +5,10 @@
 #include "CoreMinimal.h"
 #include "EditorSubsystem.h"
 #include "../Structures/EasyTelemetryStuct.h"
+#include "EasyTelemetry/Enum/EasyTelemetryEnum.h"
 #include "EasyTelemetryEditorSubsystem.generated.h"
 
+class UEasyTelemetrySettings;
 class UET_TelemetryWidget;
 class UEditorUtilityWidget;
 
@@ -19,7 +21,6 @@ class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem
 	virtual void Deinitialize() override;
 
 	void RefreshRender();
-	void GenerateHeatMaps();	
 
 	UPROPERTY()
 	TArray<FTrack> Tracks;
@@ -32,7 +33,22 @@ class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem
 	float mTime;
 	float mMaxTime;
 
+	bool bDraw;
+	bool bDrawHeat;
+
+	DrawType mDrawType;
+	
+	FLinearColor ColdColor = FLinearColor(0.2f, 0.6f, 1.f);
+	FLinearColor HotColor = FLinearColor(1.f, 0.f, 0.f);
+
+	float TrajectoryRadius;
+	float TrajectorySensitivity;
+	
+	float MechanicRadius;
+	float MechanicSensitivity;
+
 public:
+	
 	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Data")
 	void LoadData(UET_TelemetryWidget* Widget);
 
@@ -43,6 +59,9 @@ public:
 	{
 		return Tracks;
 	}
+
+	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
+	void RefreshSettings();
 
 	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
 	void Draw();
@@ -61,4 +80,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "EasyTelemetry|Tracking")
 	float GetMaxTime();
+
+	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
+	void SetDrawType(DrawType DrawType);
+
+	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
+	void SetDraw(bool pDraw);
+
+	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
+	void SetDrawHeat(bool pDrawHeat);
 };

@@ -282,7 +282,10 @@
 /I "Editor\SceneDepthPickerMode\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationEditMode\UHT"
 /I "Editor\AnimationEditMode\Public"
+/I "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\UnrealEditor\Inc\EasyTelemetry\UHT"
 /I "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source"
+/I "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source\EasyTelemetry\Public"
+/I "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\UnrealEditor\Inc\EasyTelemetryRuntime\UHT"
 /I "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source\EasyTelemetryRuntime\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"

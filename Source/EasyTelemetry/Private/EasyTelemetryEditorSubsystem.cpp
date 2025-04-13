@@ -3,7 +3,7 @@
 
 #include "EasyTelemetryEditorSubsystem.h"
 
-#include "VectorTypes.h"
+#include "EasyTelemetrySettings.h"
 #include "Framework/Notifications/NotificationManager.h"
 #include "ETWidgets/ET_TelemetryWidget.h"
 #include "Widgets/Notifications/SNotificationList.h"
@@ -16,6 +16,9 @@ void UEasyTelemetryEditorSubsystem::Initialize(FSubsystemCollectionBase& Collect
 
 	mTime = -1;
 	mMaxTime = 0;
+	mDrawType = DrawType::Trajectory;
+	bDraw = false;
+	bDrawHeat = false;
 
 	UE_LOG(LogTemp, Display, TEXT("EasyTelemetryEditorSubsystem::Initialize"));
 }
@@ -25,11 +28,6 @@ void UEasyTelemetryEditorSubsystem::Deinitialize()
 	Super::Deinitialize();
 
 	UE_LOG(LogTemp, Display, TEXT("EasyTelemetryEditorSubsystem::DeInitialize"));
-}
-
-void UEasyTelemetryEditorSubsystem::GenerateHeatMaps()
-{
-	return;
 }
 
 void UEasyTelemetryEditorSubsystem::UpdateMechanicState(FString Mechanic, bool bState)
@@ -45,6 +43,18 @@ void UEasyTelemetryEditorSubsystem::UpdateMechanicState(FString Mechanic, bool b
 void UEasyTelemetryEditorSubsystem::RefreshRender()
 {
 	FlushTrajectory();
+	Draw();
+}
+
+void UEasyTelemetryEditorSubsystem::RefreshSettings()
+{
+	ColdColor = GetDefault<UEasyTelemetrySettings>()->ColdColor;
+	HotColor = GetDefault<UEasyTelemetrySettings>()->HotColor;
+	TrajectoryRadius = GetDefault<UEasyTelemetrySettings>()->TrajectoryRadius;
+	TrajectorySensitivity = GetDefault<UEasyTelemetrySettings>()->TrajectorySensitivity;
+	MechanicRadius = GetDefault<UEasyTelemetrySettings>()->MechanicRadius;
+	MechanicSensitivity	= GetDefault<UEasyTelemetrySettings>()->MechanicSensitivity;
+
 	Draw();
 }
 
@@ -168,7 +178,7 @@ void UEasyTelemetryEditorSubsystem::LoadData(UET_TelemetryWidget* Widget)
 		NotificationItem = nullptr;
 	}
 
-	GenerateHeatMaps();
+	RefreshSettings();
 }
 
 void UEasyTelemetryEditorSubsystem::Draw()
@@ -178,9 +188,31 @@ void UEasyTelemetryEditorSubsystem::Draw()
 	{
 		LocalDraw = mMaxTime;
 	}
+
 	FlushTrajectory();
-	DrawTrajectory(LocalDraw);
-	DrawMecanics(LocalDraw);	
+	if (bDraw)
+	{
+		switch (mDrawType)
+		{
+			case DrawType::Both:
+				DrawTrajectory(LocalDraw);
+				DrawMecanics(LocalDraw);	
+			break;
+			
+			case DrawType::Trajectory:
+				DrawTrajectory(LocalDraw);
+			break;
+			
+			case DrawType::Mechanic:
+				DrawMecanics(LocalDraw);
+			break;
+			
+			default:
+				DrawTrajectory(LocalDraw);
+				DrawMecanics(LocalDraw);
+			break;
+		}
+	}
 }
 
 void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
@@ -203,18 +235,41 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 				const FVector& Start = CurrentTrack.Locations[i].Location;
 				FVector& End = CurrentTrack.Locations[i + 1].Location;
 
+				if (Start == FVector::ZeroVector || End == FVector::ZeroVector) return;
+
 				if (CurrentTrack.Locations[i + 1].TimeStemp > Time)
 				{
 					float SegmentDuration = CurrentTrack.Locations[i + 1].TimeStemp - CurrentTrack.Locations[i].TimeStemp;
 					float Alpha = (Time - CurrentTrack.Locations[i].TimeStemp) / SegmentDuration;
 					End = FMath::Lerp(Start, End, Alpha);
+				};
+				int32 CountNearby = 0;
+				FColor HeatColor;
+
+				if (bDrawHeat)
+				{
+					for (const FTrack& OtherTrack : Tracks)
+					{
+						for (const FPlayerLocation& OtherLoc : OtherTrack.Locations)
+						{
+							if ( Time >= OtherLoc.TimeStemp && FVector::DistSquared(End, OtherLoc.Location) <= TrajectoryRadius * TrajectoryRadius)
+							{
+								CountNearby++;
+							}
+						}
+					}
+
+					float NormalizedDensity = FMath::Clamp(static_cast<float>(CountNearby) / TrajectorySensitivity, 0.f, 1.f);
+					FLinearColor InterpolatedColor = FLinearColor::LerpUsingHSV(ColdColor, HotColor, NormalizedDensity);
+					HeatColor = InterpolatedColor.ToFColor(true);
 				}
+				
 				DrawDebugDirectionalArrow(
 					World,
 					Start,
 					End,
 					100.0f,
-					CurrentTrack.Color,
+					bDrawHeat ? HeatColor : CurrentTrack.Color,
 					true,
 					0.0f,
 					0,
@@ -250,11 +305,33 @@ void UEasyTelemetryEditorSubsystem::DrawMecanics(float Time)
 			{
 				if (ActiveMechanics.Contains(CurrentMechanic.Mechanic) && ActiveMechanics[CurrentMechanic.Mechanic])
 				{
+					int32 CountNearby = 0;
+					FColor HeatColor;
+					
+					if (bDrawHeat)
+					{
+						for (const FTrack& OtherTrack : Tracks)
+						{
+							for (const FMechanic & OtherLoc : OtherTrack.Mechanics)
+							{
+								if ( Time >= OtherLoc.TimeStemp && FVector::DistSquared(CurrentMechanic.Location, OtherLoc.Location) <= MechanicRadius * MechanicRadius)
+								{
+									CountNearby++;
+								}
+							}
+						}
+
+						float NormalizedDensity = FMath::Clamp(static_cast<float>(CountNearby) / MechanicSensitivity, 0.f, 1.f);
+						
+						FLinearColor InterpolatedColor = FLinearColor::LerpUsingHSV(ColdColor, HotColor, NormalizedDensity);
+						HeatColor = InterpolatedColor.ToFColor(true);
+					}
+					
 					DrawDebugBox(
 						World,
 						CurrentMechanic.Location,
 						FVector(22.0f,22.0f,22.0f),
-						CurrentMechanic.Color,
+						bDrawHeat ? HeatColor : CurrentMechanic.Color,
 						true,
 						0.0f,
 						0,
@@ -275,5 +352,23 @@ void UEasyTelemetryEditorSubsystem::SetTime(float Time)
 float UEasyTelemetryEditorSubsystem::GetMaxTime()
 {
 	return mMaxTime;
+}
+
+void UEasyTelemetryEditorSubsystem::SetDrawType(DrawType DrawType)
+{
+	mDrawType = DrawType;
+	Draw();
+}
+
+void UEasyTelemetryEditorSubsystem::SetDraw(bool pDraw)
+{
+	bDraw = pDraw;
+	Draw();
+}
+
+void UEasyTelemetryEditorSubsystem::SetDrawHeat(bool pDrawHeat)
+{
+	bDrawHeat = pDrawHeat;
+	Draw();
 }
 

@@ -51,7 +51,7 @@ public class EasyTelemetry : ModuleRules
 				"Json",
 				"JsonUtilities",
 				"EditorSubsystem",
-				"EasyTelemetryRuntime"
+				"EasyTelemetryRuntime",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
