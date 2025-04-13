@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetry\\private\\easytelemetrystyle.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\projects\\p_gameplaymetrics\\intermediate\\build\\win64\\x64\\p_gameplaymetricseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\definitions.easytelemetry.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetrystyle.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\interfaces\\ipluginmanager.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\plugindescriptor.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\custombuildsteps.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\localizationdescriptor.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\moduledescriptor.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\plugindisalloweddescriptor.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\pluginreferencedescriptor.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\versescope.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestylemacros.h",
+            "e:\\epic\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestyleregistry.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

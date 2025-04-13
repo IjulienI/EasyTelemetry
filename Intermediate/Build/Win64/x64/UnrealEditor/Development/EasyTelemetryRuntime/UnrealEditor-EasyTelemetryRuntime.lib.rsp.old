@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-EasyTelemetryRuntime.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetryRuntime\Module.EasyTelemetryRuntime.cpp.obj"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetryRuntime\EasyTelemetryRuntime.cpp.obj"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetryRuntime\EasyTelemetrySubsystem.cpp.obj"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetryRuntime\Default.rc2.res"
+/OUT:"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetryRuntime\UnrealEditor-EasyTelemetryRuntime.lib"

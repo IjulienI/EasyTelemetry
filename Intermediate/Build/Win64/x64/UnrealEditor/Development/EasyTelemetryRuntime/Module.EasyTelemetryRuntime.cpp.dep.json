@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetryruntime\\module.easytelemetryruntime.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\projects\\p_gameplaymetrics\\intermediate\\build\\win64\\x64\\p_gameplaymetricseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetryruntime\\definitions.easytelemetryruntime.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetryruntime.init.gen.cpp",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrystuct.gen.cpp",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\structures\\easytelemetrystuct.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrystuct.generated.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrysubsystem.gen.cpp",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\public\\easytelemetrysubsystem.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrysubsystem.generated.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\et_blueprintlibrary.gen.cpp",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\public\\et_blueprintlibrary.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\et_blueprintlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

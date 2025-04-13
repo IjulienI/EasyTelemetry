@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\private\\easytelemetryruntime.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\projects\\p_gameplaymetrics\\intermediate\\build\\win64\\x64\\p_gameplaymetricseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetryruntime\\definitions.easytelemetryruntime.h",
+            "e:\\unreal\\projects\\p_gameplaymetrics\\plugins\\easytelemetry\\source\\easytelemetryruntime\\public\\easytelemetryruntime.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
