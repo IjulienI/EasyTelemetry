@@ -4,7 +4,7 @@
 	"VersionName": "1.0",
 	"FriendlyName": "EasyTelemetry",
 	"Description": "",
-	"Category": "Telemetry",
+	"Category": "Other",
 	"CreatedBy": "Julien SOUM",
 	"CreatedByURL": "https://github.com/IjulienI",
 	"DocsURL": "",
@@ -13,20 +13,17 @@
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
-	"Installed": false,
-	"SupportedTargetPlatforms": [
-		"Win64"
-	],
+	"Installed": true,
 	"Modules": [
-		{
-			"Name": "EasyTelemetry",
-			"Type": "Editor",
-			"LoadingPhase": "Default"
-		},
 		{
 			"Name": "EasyTelemetryRuntime",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+		"Name": "EasyTelemetry",
+		"Type": "Editor",
+		"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [

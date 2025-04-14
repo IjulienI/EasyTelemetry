@@ -234,16 +234,25 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 	{
 		if (!World || CurrentTrack.Locations.Num() < 2) return;
 
+		bool FirstPass = true;
+		FVector FirstLocation;
+		
 		for (int32 i = 0; i < CurrentTrack.Locations.Num() - 1; ++i)
 		{
 			float StartTime = CurrentTrack.Locations[i].TimeStemp;
+
+			if (FirstPass)
+			{
+				FirstLocation = CurrentTrack.Locations[i].Location;
+				FirstPass = false;
+			}
 			
 			if (Time >= StartTime)
 			{
 				const FVector& Start = CurrentTrack.Locations[i].Location;
 				FVector& End = CurrentTrack.Locations[i + 1].Location;
 
-				if (Start == FVector::ZeroVector || End == FVector::ZeroVector) return;
+				if (End == FirstLocation) break;
 
 				if (CurrentTrack.Locations[i + 1].TimeStemp > Time)
 				{
