@@ -252,7 +252,7 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 				const FVector& Start = CurrentTrack.Locations[i].Location;
 				FVector& End = CurrentTrack.Locations[i + 1].Location;
 
-				if (End == FirstLocation) break;
+				if (End == FirstLocation) continue;
 
 				if (CurrentTrack.Locations[i + 1].TimeStemp > Time)
 				{
@@ -269,7 +269,7 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 					{
 						for (const FPlayerLocation& OtherLoc : OtherTrack.Locations)
 						{
-							if ( Time >= OtherLoc.TimeStemp && FVector::DistSquared(End, OtherLoc.Location) <= TrajectoryRadius * TrajectoryRadius)
+							if ( Time >= OtherLoc.TimeStemp && FVector::DistSquared(Start, OtherLoc.Location) <= TrajectoryRadius * TrajectoryRadius)
 							{
 								CountNearby++;
 							}

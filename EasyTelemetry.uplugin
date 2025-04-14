@@ -10,9 +10,8 @@
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
+	"EngineVersion": "5.4.0",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
@@ -21,15 +20,9 @@
 			"LoadingPhase": "Default"
 		},
 		{
-		"Name": "EasyTelemetry",
-		"Type": "Editor",
-		"LoadingPhase": "Default"
+			"Name": "EasyTelemetry",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
 		}
-	],
-	"Plugins": [
-		{
-			"Name": "EditorScriptingUtilities",
-			"Enabled": true
-		}
-	]	
+	]
 }

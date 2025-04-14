@@ -29,6 +29,13 @@ template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FPlayerLo
 template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FMechanic>();
 
 #define FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_51_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FTimedMechanic_Statics; \
+	EASYTELEMETRYRUNTIME_API static class UScriptStruct* StaticStruct();
+
+
+template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FTimedMechanic>();
+
+#define FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_81_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FTrack_Statics; \
 	EASYTELEMETRYRUNTIME_API static class UScriptStruct* StaticStruct();
 

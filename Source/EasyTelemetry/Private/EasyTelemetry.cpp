@@ -5,7 +5,6 @@
 #include "EasyTelemetryCommands.h"
 #include "ToolMenus.h"
 #include "Editor.h"
-#include "EditorAssetLibrary.h"
 #include "EditorUtilitySubsystem.h"
 #include "EditorUtilityWidgetBlueprint.h"
 
@@ -47,7 +46,7 @@ void FEasyTelemetryModule::ShutdownModule()
 
 void FEasyTelemetryModule::PluginButtonClicked()
 {
-	UObject * Blueprint = UEditorAssetLibrary::LoadAsset(FString(TEXT("/EasyTelemetry/EditorWidget/GameplayMetrics.GameplayMetrics")));
+	UObject * Blueprint = StaticLoadObject(UObject::StaticClass(), nullptr, TEXT("/EasyTelemetry/EditorWidget/GameplayMetrics.GameplayMetrics"));
 	if(IsValid(Blueprint)) 
 	{
 		//Make sure it's actually an editor widget

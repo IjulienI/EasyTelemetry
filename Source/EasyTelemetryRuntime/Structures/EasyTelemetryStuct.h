@@ -46,6 +46,36 @@ struct FMechanic
 };
 
 USTRUCT(BlueprintType)
+struct FTimedMechanic
+{
+	GENERATED_USTRUCT_BODY()
+
+	FTimedMechanic()
+	: Mechanic(TEXT(""))
+	, StartLocation(FVector::ZeroVector)
+	, EndLocation(FVector::ZeroVector)
+	, TimeStemp(0.f)
+	, Color(FColor::Green)
+	{}
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	FString Mechanic;
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	FVector StartLocation;
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	FVector EndLocation;
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	float TimeStemp;
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	FColor Color;
+	
+};
+
+USTRUCT(BlueprintType)
 struct FTrack
 {
 	GENERATED_USTRUCT_BODY()

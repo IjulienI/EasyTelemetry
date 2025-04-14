@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define EASYTELEMETRY_ET_TelemetryWidget_generated_h
 
 #define FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOpenDataFolder); \
 	DECLARE_FUNCTION(execUpdateMechanicState); \
 	DECLARE_FUNCTION(execLoadData);
 

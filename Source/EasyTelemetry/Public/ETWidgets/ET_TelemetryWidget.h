@@ -21,6 +21,9 @@ private:
 	UFUNCTION(BlueprintCallable, Category="EasyTelemetry")
 	void UpdateMechanicState(FString Mechanic, bool bState);
 
+	UFUNCTION(BlueprintCallable, Category="EasyTelemetry")
+	void OpenDataFolder();
+
 public:
 	UFUNCTION(BlueprintImplementableEvent, Category="EasyTelemetry")
 	void DataLoaded();

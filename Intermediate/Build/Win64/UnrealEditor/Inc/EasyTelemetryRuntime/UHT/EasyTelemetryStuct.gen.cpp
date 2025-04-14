@@ -14,6 +14,7 @@ COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FMechanic();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerLocation();
+EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTimedMechanic();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTrack();
 UPackage* Z_Construct_UPackage__Script_EasyTelemetryRuntime();
 // End Cross Module References
@@ -170,6 +171,96 @@ UScriptStruct* Z_Construct_UScriptStruct_FMechanic()
 }
 // End ScriptStruct FMechanic
 
+// Begin ScriptStruct FTimedMechanic
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_TimedMechanic;
+class UScriptStruct* FTimedMechanic::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_TimedMechanic.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_TimedMechanic.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FTimedMechanic, (UObject*)Z_Construct_UPackage__Script_EasyTelemetryRuntime(), TEXT("TimedMechanic"));
+	}
+	return Z_Registration_Info_UScriptStruct_TimedMechanic.OuterSingleton;
+}
+template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<FTimedMechanic>()
+{
+	return FTimedMechanic::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FTimedMechanic_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mechanic_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EndLocation_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TimeStemp_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Color_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_Mechanic;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_EndLocation;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeStemp;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Color;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTimedMechanic>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_Mechanic = { "Mechanic", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTimedMechanic, Mechanic), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mechanic_MetaData), NewProp_Mechanic_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTimedMechanic, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartLocation_MetaData), NewProp_StartLocation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_EndLocation = { "EndLocation", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTimedMechanic, EndLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EndLocation_MetaData), NewProp_EndLocation_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_TimeStemp = { "TimeStemp", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTimedMechanic, TimeStemp), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeStemp_MetaData), NewProp_TimeStemp_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTimedMechanic, Color), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Color_MetaData), NewProp_Color_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTimedMechanic_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_Mechanic,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_StartLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_EndLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_TimeStemp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewProp_Color,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTimedMechanic_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTimedMechanic_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_EasyTelemetryRuntime,
+	nullptr,
+	&NewStructOps,
+	"TimedMechanic",
+	Z_Construct_UScriptStruct_FTimedMechanic_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTimedMechanic_Statics::PropPointers),
+	sizeof(FTimedMechanic),
+	alignof(FTimedMechanic),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTimedMechanic_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FTimedMechanic_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FTimedMechanic()
+{
+	if (!Z_Registration_Info_UScriptStruct_TimedMechanic.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_TimedMechanic.InnerSingleton, Z_Construct_UScriptStruct_FTimedMechanic_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_TimedMechanic.InnerSingleton;
+}
+// End ScriptStruct FTimedMechanic
+
 // Begin ScriptStruct FTrack
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Track;
 class UScriptStruct* FTrack::StaticStruct()
@@ -265,10 +356,11 @@ struct Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyT
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FPlayerLocation::StaticStruct, Z_Construct_UScriptStruct_FPlayerLocation_Statics::NewStructOps, TEXT("PlayerLocation"), &Z_Registration_Info_UScriptStruct_PlayerLocation, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerLocation), 1756572027U) },
 		{ FMechanic::StaticStruct, Z_Construct_UScriptStruct_FMechanic_Statics::NewStructOps, TEXT("Mechanic"), &Z_Registration_Info_UScriptStruct_Mechanic, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMechanic), 3037053307U) },
+		{ FTimedMechanic::StaticStruct, Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewStructOps, TEXT("TimedMechanic"), &Z_Registration_Info_UScriptStruct_TimedMechanic, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTimedMechanic), 1212837786U) },
 		{ FTrack::StaticStruct, Z_Construct_UScriptStruct_FTrack_Statics::NewStructOps, TEXT("Track"), &Z_Registration_Info_UScriptStruct_Track, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTrack), 2099923897U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_25448152(TEXT("/Script/EasyTelemetryRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_570371639(TEXT("/Script/EasyTelemetryRuntime"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_Statics::ScriptStructInfo),
 	nullptr, 0);

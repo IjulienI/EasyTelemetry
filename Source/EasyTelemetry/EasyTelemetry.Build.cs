@@ -44,7 +44,6 @@ public class EasyTelemetry : ModuleRules
 				"Slate",
 				"SlateCore",
 				"UMGEditor",
-				"EditorScriptingUtilities",
 				"Blutility",
 				"UMG",
 				"Json",

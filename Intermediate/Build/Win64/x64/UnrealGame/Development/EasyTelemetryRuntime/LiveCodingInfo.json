@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EasyTelemetryRuntime.cpp.obj": [
+			"EasyTelemetryRuntime.init.gen.cpp.obj",
+			"EasyTelemetrySettings.gen.cpp.obj",
+			"EasyTelemetryStuct.gen.cpp.obj",
+			"EasyTelemetrySubsystem.gen.cpp.obj",
+			"ET_BlueprintLibrary.gen.cpp.obj",
+			"EasyTelemetryRuntime.cpp.obj",
+			"EasyTelemetrySettings.cpp.obj",
+			"EasyTelemetrySubsystem.cpp.obj",
+			"ET_BlueprintLibrary.cpp.obj"
+		]
+	}
+}

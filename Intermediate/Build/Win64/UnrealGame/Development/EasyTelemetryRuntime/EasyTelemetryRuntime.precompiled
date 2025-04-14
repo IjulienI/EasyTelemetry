@@ -1,0 +1,9 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\EasyTelemetryRuntime\\Module.EasyTelemetryRuntime.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\EasyTelemetryRuntime\\EasyTelemetryRuntime.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\EasyTelemetryRuntime\\EasyTelemetrySettings.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\EasyTelemetryRuntime\\EasyTelemetrySubsystem.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\EasyTelemetryRuntime\\ET_BlueprintLibrary.cpp.obj"
+	]
+}

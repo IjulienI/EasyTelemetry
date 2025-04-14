@@ -74,6 +74,36 @@ DEFINE_FUNCTION(UET_TelemetryWidget::execLoadData)
 }
 // End Class UET_TelemetryWidget Function LoadData
 
+// Begin Class UET_TelemetryWidget Function OpenDataFolder
+struct Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EasyTelemetry" },
+		{ "ModuleRelativePath", "Public/ETWidgets/ET_TelemetryWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UET_TelemetryWidget, nullptr, "OpenDataFolder", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder_Statics::Function_MetaDataParams), Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UET_TelemetryWidget::execOpenDataFolder)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OpenDataFolder();
+	P_NATIVE_END;
+}
+// End Class UET_TelemetryWidget Function OpenDataFolder
+
 // Begin Class UET_TelemetryWidget Function UpdateMechanicState
 struct Z_Construct_UFunction_UET_TelemetryWidget_UpdateMechanicState_Statics
 {
@@ -133,6 +163,7 @@ void UET_TelemetryWidget::StaticRegisterNativesUET_TelemetryWidget()
 	UClass* Class = UET_TelemetryWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "LoadData", &UET_TelemetryWidget::execLoadData },
+		{ "OpenDataFolder", &UET_TelemetryWidget::execOpenDataFolder },
 		{ "UpdateMechanicState", &UET_TelemetryWidget::execUpdateMechanicState },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -157,6 +188,7 @@ struct Z_Construct_UClass_UET_TelemetryWidget_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UET_TelemetryWidget_DataLoaded, "DataLoaded" }, // 699213461
 		{ &Z_Construct_UFunction_UET_TelemetryWidget_LoadData, "LoadData" }, // 2882295968
+		{ &Z_Construct_UFunction_UET_TelemetryWidget_OpenDataFolder, "OpenDataFolder" }, // 3415203826
 		{ &Z_Construct_UFunction_UET_TelemetryWidget_UpdateMechanicState, "UpdateMechanicState" }, // 2598457150
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -206,10 +238,10 @@ UET_TelemetryWidget::~UET_TelemetryWidget() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UET_TelemetryWidget, UET_TelemetryWidget::StaticClass, TEXT("UET_TelemetryWidget"), &Z_Registration_Info_UClass_UET_TelemetryWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UET_TelemetryWidget), 3440290213U) },
+		{ Z_Construct_UClass_UET_TelemetryWidget, UET_TelemetryWidget::StaticClass, TEXT("UET_TelemetryWidget"), &Z_Registration_Info_UClass_UET_TelemetryWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UET_TelemetryWidget), 3235374258U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_1061714608(TEXT("/Script/EasyTelemetry"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_945748890(TEXT("/Script/EasyTelemetry"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_ETWidgets_ET_TelemetryWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
