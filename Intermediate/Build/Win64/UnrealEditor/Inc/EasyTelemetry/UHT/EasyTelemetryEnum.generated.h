@@ -16,7 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define EASYTELEMETRY_EasyTelemetryEnum_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetry_Enum_EasyTelemetryEnum_h
+#define CURRENT_FILE_ID FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Enum_EasyTelemetryEnum_h
 
 
 #define FOREACH_ENUM_DRAWTYPE(op) \

@@ -35,4 +35,7 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, Category="EasyTelemetry|Heat|Mechanic")
 	float MechanicSensitivity = 50.0f;
+	
+	UPROPERTY(Config, EditAnywhere, Category="EasyTelemetry|Debug")
+	bool bShowDebug = false;
 };

@@ -22,7 +22,8 @@ void UEasyTelemetrySubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	UE_LOG(LogTemp, Display, TEXT("EasyTelemetrySubsystem::Initialize"));
 	
 	//Delegate on world Initialization
-	FWorldDelegates::OnPostWorldInitialization.AddUObject(this, &UEasyTelemetrySubsystem::HandlePostWorldInit);	
+	FWorldDelegates::OnPostWorldInitialization.AddUObject(this, &UEasyTelemetrySubsystem::HandlePostWorldInit);
+	bDrawDebug = GetDefault<UEasyTelemetrySettings>()->bShowDebug;
 }
 
 void UEasyTelemetrySubsystem::Deinitialize()
@@ -59,11 +60,13 @@ void UEasyTelemetrySubsystem::LogPlayersLocation()
 		FPlayerLocation CharacterLocationLog;
 		CharacterLocationLog.Location = Character->GetActorLocation();
 		CharacterLocationLog.TimeStemp = mWorld->GetTimeSeconds();
-
+		
+		LocationsLog.Add(CharacterLocationLog);
+		
+		if(!bDrawDebug) continue;
 		DrawDebugSphere(mWorld, CharacterLocationLog.Location, 25.0f, 6, FColor::Red, false ,10.0f);
 		DrawDebugString(mWorld, CharacterLocationLog.Location, FString::SanitizeFloat(CharacterLocationLog.TimeStemp), 0 ,FColor::Cyan, 10.0f, false, 1 );
 
-		LocationsLog.Add(CharacterLocationLog);
 	}
 }
 
@@ -141,9 +144,11 @@ void UEasyTelemetrySubsystem::TrackMechanic(ACharacter* Character, FString Mecha
 	MechanicLog.TimeStemp = mWorld->GetTimeSeconds();
 	MechanicLog.Color = Color;
 	
+	MechanicsLog.Add(MechanicLog);
+	LogPlayersLocation();
+
+	if(!bDrawDebug) return;
 	DrawDebugSphere(mWorld, MechanicLog.Location, 15.0f, 6, FColor::Green, false ,10.0f);
 	DrawDebugString(mWorld, MechanicLog.Location, FString::SanitizeFloat(MechanicLog.TimeStemp), 0 ,FColor::Cyan, 10.0f, false, 1 );
 
-	MechanicsLog.Add(MechanicLog);
-	LogPlayersLocation();
 }

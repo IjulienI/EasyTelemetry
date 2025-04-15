@@ -29,6 +29,8 @@ private:
 
 	void CreateDataJson();
 
+	bool bDrawDebug;
+
 	UPROPERTY()
 	UWorld* mWorld;
 

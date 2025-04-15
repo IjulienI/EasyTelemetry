@@ -1,4 +1,4 @@
-"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source\EasyTelemetry\Private\Widgets\ET_TelemetryWidget.cpp"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source\EasyTelemetry\Private\ETWidgets\ET_TelemetryWidget.cpp"
 /FI"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /FI"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\Definitions.EasyTelemetry.h"
 /Yu"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"

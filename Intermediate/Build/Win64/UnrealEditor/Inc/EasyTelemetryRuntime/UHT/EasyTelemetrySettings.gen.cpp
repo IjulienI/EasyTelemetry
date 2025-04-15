@@ -72,6 +72,10 @@ struct Z_Construct_UClass_UEasyTelemetrySettings_Statics
 		{ "Category", "EasyTelemetry|Heat|Mechanic" },
 		{ "ModuleRelativePath", "Public/EasyTelemetrySettings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShowDebug_MetaData[] = {
+		{ "Category", "EasyTelemetry|Debug" },
+		{ "ModuleRelativePath", "Public/EasyTelemetrySettings.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_LogInterval;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ColdColor;
@@ -80,6 +84,8 @@ struct Z_Construct_UClass_UEasyTelemetrySettings_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TrajectorySensitivity;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MechanicRadius;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MechanicSensitivity;
+	static void NewProp_bShowDebug_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShowDebug;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -94,6 +100,11 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UEasyTelemetryS
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_TrajectorySensitivity = { "TrajectorySensitivity", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UEasyTelemetrySettings, TrajectorySensitivity), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrajectorySensitivity_MetaData), NewProp_TrajectorySensitivity_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_MechanicRadius = { "MechanicRadius", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UEasyTelemetrySettings, MechanicRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MechanicRadius_MetaData), NewProp_MechanicRadius_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_MechanicSensitivity = { "MechanicSensitivity", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UEasyTelemetrySettings, MechanicSensitivity), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MechanicSensitivity_MetaData), NewProp_MechanicSensitivity_MetaData) };
+void Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_bShowDebug_SetBit(void* Obj)
+{
+	((UEasyTelemetrySettings*)Obj)->bShowDebug = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_bShowDebug = { "bShowDebug", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UEasyTelemetrySettings), &Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_bShowDebug_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShowDebug_MetaData), NewProp_bShowDebug_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UEasyTelemetrySettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_LogInterval,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_ColdColor,
@@ -102,6 +113,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UEasyTele
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_TrajectorySensitivity,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_MechanicRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_MechanicSensitivity,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEasyTelemetrySettings_Statics::NewProp_bShowDebug,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UEasyTelemetrySettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UEasyTelemetrySettings_Statics::DependentSingletons[])() = {
@@ -141,14 +153,14 @@ UEasyTelemetrySettings::~UEasyTelemetrySettings() {}
 // End Class UEasyTelemetrySettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics
+struct Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEasyTelemetrySettings, UEasyTelemetrySettings::StaticClass, TEXT("UEasyTelemetrySettings"), &Z_Registration_Info_UClass_UEasyTelemetrySettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEasyTelemetrySettings), 2673829641U) },
+		{ Z_Construct_UClass_UEasyTelemetrySettings, UEasyTelemetrySettings::StaticClass, TEXT("UEasyTelemetrySettings"), &Z_Registration_Info_UClass_UEasyTelemetrySettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEasyTelemetrySettings), 3334408734U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_2130191801(TEXT("/Script/EasyTelemetryRuntime"),
-	Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_P_GameplayMetrics_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_507617899(TEXT("/Script/EasyTelemetryRuntime"),
+	Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Public_EasyTelemetrySettings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

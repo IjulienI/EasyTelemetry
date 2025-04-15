@@ -12,5 +12,6 @@
 "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\EasyTelemetryCommands.cpp.obj"
 "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\EasyTelemetryEditorSubsystem.cpp.obj"
 "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\EasyTelemetryStyle.cpp.obj"
+"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\ET_TelemetryWidget.cpp.obj"
 "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\Default.rc2.res"
 /OUT:"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\UnrealEditor-EasyTelemetry.lib"

@@ -1,11 +1,11 @@
-"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Source\EasyTelemetry\Private\ETWidgets\ET_TelemetryWidget.cpp"
-/FI"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\Definitions.EasyTelemetry.h"
-/Yu"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"E:\Unreal\Projects\P_GameplayMetrics\Intermediate\Build\Win64\x64\P_GameplayMetricsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\ET_TelemetryWidget.cpp.obj"
-/sourceDependencies "E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\ET_TelemetryWidget.cpp.dep.json"
-@"E:\Unreal\Projects\P_GameplayMetrics\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\EasyTelemetry.Shared.rsp"
+"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Plugins\EasyTelemetry\Source\EasyTelemetry\Private\ETWidgets\ET_TelemetryWidget.cpp"
+/FI"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Intermediate\Build\Win64\x64\TestPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h"
+/FI"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\Definitions.EasyTelemetry.h"
+/Yu"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Intermediate\Build\Win64\x64\TestPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h"
+/Fp"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Intermediate\Build\Win64\x64\TestPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.pch"
+/Fo"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\ET_TelemetryWidget.cpp.obj"
+/sourceDependencies "C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\ET_TelemetryWidget.cpp.dep.json"
+@"C:\Users\julien.soum\Documents\Unreal Projects\TestPlugin\Plugins\EasyTelemetry\Intermediate\Build\Win64\x64\UnrealEditor\Development\EasyTelemetry\EasyTelemetry.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
