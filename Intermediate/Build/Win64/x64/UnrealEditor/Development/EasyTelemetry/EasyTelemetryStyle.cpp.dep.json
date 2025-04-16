@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\private\\easytelemetrystyle.cpp",
+        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\private\\easytelemetrystyle.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
         "Includes": [
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\definitions.easytelemetry.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetrystyle.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\definitions.easytelemetry.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetrystyle.h",
             "d:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\interfaces\\ipluginmanager.h",
             "d:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\plugindescriptor.h",
             "d:\\epic\\ue_5.4\\engine\\source\\runtime\\projects\\public\\custombuildsteps.h",

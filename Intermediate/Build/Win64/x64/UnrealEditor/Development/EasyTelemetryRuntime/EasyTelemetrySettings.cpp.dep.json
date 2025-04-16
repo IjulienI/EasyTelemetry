@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\private\\easytelemetrysettings.cpp",
+        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\private\\easytelemetrysettings.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
         "Includes": [
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetryruntime\\definitions.easytelemetryruntime.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\public\\easytelemetrysettings.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrysettings.generated.h"
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetryruntime\\definitions.easytelemetryruntime.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\public\\easytelemetrysettings.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrysettings.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

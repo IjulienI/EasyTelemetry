@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "EditorSubsystem.h"
 #include "../Structures/EasyTelemetryStuct.h"
-#include "EasyTelemetry/Enum/EasyTelemetryEnum.h"
 #include "ETWidgets/ET_TelemetryWidget.h"
 #include "Math/Color.h"
 
@@ -21,6 +20,7 @@ class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem
 	virtual void Deinitialize() override;
 
 	void RefreshRender();
+	void PregenHeatMap();
 
 	UPROPERTY()
 	TArray<FTrack> Tracks;
@@ -35,8 +35,12 @@ class EASYTELEMETRY_API UEasyTelemetryEditorSubsystem : public UEditorSubsystem
 
 	bool bDraw;
 	bool bDrawHeat;
+	bool bPregenHeat;
 
-	DrawType mDrawType;
+	int mDrawType;
+
+	TMap<int, FNormalizeDistance> TrajectoryHeatMap;
+	TMap<int, FNormalizeDistance> MechanicHeatMap;
 	
 	FLinearColor ColdColor = FLinearColor(0.2f, 0.6f, 1.f);
 	FLinearColor HotColor = FLinearColor(1.f, 0.f, 0.f);
@@ -82,11 +86,14 @@ public:
 	float GetMaxTime();
 
 	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
-	void SetDrawType(DrawType DrawType);
+	void SetDrawType(int DrawType);
 
 	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
 	void SetDraw(bool pDraw);
 
 	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Tracking")
 	void SetDrawHeat(bool pDrawHeat);
+
+	UFUNCTION(BlueprintCallable, Category = "EasyTelemetry|Heat")
+	void SetPregenHeat(bool _bPregenHeat);
 };

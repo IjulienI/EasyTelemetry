@@ -100,3 +100,16 @@ struct FTrack
 	TArray<FMechanic> Mechanics;
 	
 };
+
+USTRUCT(BlueprintType)
+struct FNormalizeDistance
+{
+	GENERATED_USTRUCT_BODY()
+
+	FNormalizeDistance()
+	: NormalizeDistance(TArray<float>())
+	{}
+
+	UPROPERTY(BlueprintReadWrite, Category = "EasyTelemetry|Data")
+	TArray<float> NormalizeDistance;	
+};

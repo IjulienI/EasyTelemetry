@@ -1,19 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\module.easytelemetry.cpp",
+        "Source": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\module.easytelemetry.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "PCH": "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\intermediate\\build\\win64\\x64\\testplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
         "Includes": [
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\definitions.easytelemetry.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetry.init.gen.cpp",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryeditorsubsystem.gen.cpp",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetryeditorsubsystem.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\structures\\easytelemetrystuct.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrystuct.generated.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\enum\\easytelemetryenum.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryenum.generated.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\etwidgets\\et_telemetrywidget.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\easytelemetry\\definitions.easytelemetry.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetry.init.gen.cpp",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryeditorsubsystem.gen.cpp",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\easytelemetryeditorsubsystem.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetryruntime\\structures\\easytelemetrystuct.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetryruntime\\uht\\easytelemetrystuct.generated.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\source\\easytelemetry\\public\\etwidgets\\et_telemetrywidget.h",
             "d:\\epic\\ue_5.4\\engine\\source\\editor\\blutility\\classes\\editorutilitywidget.h",
             "d:\\epic\\ue_5.4\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
             "d:\\epic\\ue_5.4\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetchild.h",
@@ -44,10 +42,9 @@
             "d:\\epic\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationevents.generated.h",
             "d:\\epic\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
             "d:\\epic\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\uht\\editorutilitywidget.generated.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\et_telemetrywidget.generated.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryeditorsubsystem.generated.h",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryenum.gen.cpp",
-            "c:\\users\\julien.soum\\documents\\unreal projects\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\et_telemetrywidget.gen.cpp"
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\et_telemetrywidget.generated.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\easytelemetryeditorsubsystem.generated.h",
+            "c:\\users\\julien.soum\\documents\\unreal projects\\artfx_missiondesign\\testplugin\\plugins\\easytelemetry\\intermediate\\build\\win64\\unrealeditor\\inc\\easytelemetry\\uht\\et_telemetrywidget.gen.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

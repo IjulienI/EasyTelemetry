@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeEasyTelemetryStuct() {}
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FMechanic();
+EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FNormalizeDistance();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerLocation();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTimedMechanic();
 EASYTELEMETRYRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTrack();
@@ -350,6 +351,71 @@ UScriptStruct* Z_Construct_UScriptStruct_FTrack()
 }
 // End ScriptStruct FTrack
 
+// Begin ScriptStruct FNormalizeDistance
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_NormalizeDistance;
+class UScriptStruct* FNormalizeDistance::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_NormalizeDistance.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_NormalizeDistance.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FNormalizeDistance, (UObject*)Z_Construct_UPackage__Script_EasyTelemetryRuntime(), TEXT("NormalizeDistance"));
+	}
+	return Z_Registration_Info_UScriptStruct_NormalizeDistance.OuterSingleton;
+}
+template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<FNormalizeDistance>()
+{
+	return FNormalizeDistance::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FNormalizeDistance_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NormalizeDistance_MetaData[] = {
+		{ "Category", "EasyTelemetry|Data" },
+		{ "ModuleRelativePath", "Structures/EasyTelemetryStuct.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_NormalizeDistance_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_NormalizeDistance;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNormalizeDistance>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FNormalizeDistance_Statics::NewProp_NormalizeDistance_Inner = { "NormalizeDistance", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FNormalizeDistance_Statics::NewProp_NormalizeDistance = { "NormalizeDistance", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNormalizeDistance, NormalizeDistance), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NormalizeDistance_MetaData), NewProp_NormalizeDistance_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FNormalizeDistance_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNormalizeDistance_Statics::NewProp_NormalizeDistance_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNormalizeDistance_Statics::NewProp_NormalizeDistance,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNormalizeDistance_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNormalizeDistance_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_EasyTelemetryRuntime,
+	nullptr,
+	&NewStructOps,
+	"NormalizeDistance",
+	Z_Construct_UScriptStruct_FNormalizeDistance_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNormalizeDistance_Statics::PropPointers),
+	sizeof(FNormalizeDistance),
+	alignof(FNormalizeDistance),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNormalizeDistance_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FNormalizeDistance_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FNormalizeDistance()
+{
+	if (!Z_Registration_Info_UScriptStruct_NormalizeDistance.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_NormalizeDistance.InnerSingleton, Z_Construct_UScriptStruct_FNormalizeDistance_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_NormalizeDistance.InnerSingleton;
+}
+// End ScriptStruct FNormalizeDistance
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_Statics
 {
@@ -358,9 +424,10 @@ struct Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTel
 		{ FMechanic::StaticStruct, Z_Construct_UScriptStruct_FMechanic_Statics::NewStructOps, TEXT("Mechanic"), &Z_Registration_Info_UScriptStruct_Mechanic, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMechanic), 3037053307U) },
 		{ FTimedMechanic::StaticStruct, Z_Construct_UScriptStruct_FTimedMechanic_Statics::NewStructOps, TEXT("TimedMechanic"), &Z_Registration_Info_UScriptStruct_TimedMechanic, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTimedMechanic), 1212837786U) },
 		{ FTrack::StaticStruct, Z_Construct_UScriptStruct_FTrack_Statics::NewStructOps, TEXT("Track"), &Z_Registration_Info_UScriptStruct_Track, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTrack), 2099923897U) },
+		{ FNormalizeDistance::StaticStruct, Z_Construct_UScriptStruct_FNormalizeDistance_Statics::NewStructOps, TEXT("NormalizeDistance"), &Z_Registration_Info_UScriptStruct_NormalizeDistance, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FNormalizeDistance), 551344218U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_570371639(TEXT("/Script/EasyTelemetryRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_465286117(TEXT("/Script/EasyTelemetryRuntime"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_Statics::ScriptStructInfo),
 	nullptr, 0);

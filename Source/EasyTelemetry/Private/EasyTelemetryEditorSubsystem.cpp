@@ -9,10 +9,12 @@
 #include "Misc/Paths.h"
 #include "EasyTelemetryRuntime/Structures/EasyTelemetryStuct.h"
 #include "DrawDebugHelpers.h"
+#include "VectorTypes.h"
 #include "Engine/World.h"
 #include "HAL/FileManager.h"
 #include "Misc/FileHelper.h"
 #include "Engine/Engine.h"
+#include "EntitySystem/MovieSceneEntitySystemRunner.h"
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
 
@@ -24,7 +26,7 @@ void UEasyTelemetryEditorSubsystem::Initialize(FSubsystemCollectionBase& Collect
 
 	mTime = -1;
 	mMaxTime = 0;
-	mDrawType = DrawType::Trajectory;
+	mDrawType = 0;
 	bDraw = false;
 	bDrawHeat = false;
 
@@ -52,6 +54,45 @@ void UEasyTelemetryEditorSubsystem::RefreshRender()
 {
 	FlushTrajectory();
 	Draw();
+}
+
+void UEasyTelemetryEditorSubsystem::PregenHeatMap()
+{
+	//Pregen Trajectory Heatmap
+	TrajectoryHeatMap.Empty();
+
+	UWorld* World = GEditor->GetEditorWorldContext().World();
+	int TrackCount = 0;
+	for(FTrack& CurrentTrack : Tracks)
+	{
+		FNormalizeDistance CurrentDensity;
+		if (!World || CurrentTrack.Locations.Num() < 2) return;
+		
+		for(int32 i = 0; i < CurrentTrack.Locations.Num() -1; i++)
+		{
+			const FVector& Point = CurrentTrack.Locations[i].Location;
+			
+			int32 CountNearby = 0;
+
+			for(const FTrack& OtherTrack : Tracks)
+			{
+				for(const FPlayerLocation& OtherLoc : OtherTrack.Locations)
+				{
+					if(FVector::DistSquared(Point, OtherLoc.Location) <= TrajectoryRadius * TrajectoryRadius)
+					{
+						CountNearby ++;
+					}
+				}
+			}
+			
+			float NormalizedDensity = FMath::Clamp(static_cast<float>(CountNearby) / TrajectorySensitivity, 0.f, 1.f);
+			CurrentDensity.NormalizeDistance.Add(NormalizedDensity);
+		}
+		TrajectoryHeatMap.Add(TrackCount, CurrentDensity);
+		TrackCount ++;
+	}
+
+	//Pregen Mechanic Heatmap
 }
 
 void UEasyTelemetryEditorSubsystem::RefreshSettings()
@@ -185,7 +226,7 @@ void UEasyTelemetryEditorSubsystem::LoadData(UET_TelemetryWidget* Widget)
 		NotificationItem->ExpireAndFadeout();
 		NotificationItem = nullptr;
 	}
-
+	PregenHeatMap();
 	RefreshSettings();
 }
 
@@ -202,16 +243,16 @@ void UEasyTelemetryEditorSubsystem::Draw()
 	{
 		switch (mDrawType)
 		{
-			case DrawType::Both:
-				DrawTrajectory(LocalDraw);
-				DrawMecanics(LocalDraw);	
-			break;
-			
-			case DrawType::Trajectory:
+			case 1:
 				DrawTrajectory(LocalDraw);
 			break;
 			
-			case DrawType::Mechanic:
+			case 2:
+				DrawMecanics(LocalDraw);
+			break;
+			
+			case 3:
+				DrawTrajectory(LocalDraw);
 				DrawMecanics(LocalDraw);
 			break;
 			
@@ -230,6 +271,7 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 	bCurrentlyDrawTrajectory = true;
 
 	UWorld* World = GEditor->GetEditorWorldContext().World();
+	int TrackCount = 0;
 	for (FTrack CurrentTrack : Tracks)
 	{
 		if (!World || CurrentTrack.Locations.Num() < 2) return;
@@ -262,11 +304,13 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 				};
 				int32 CountNearby = 0;
 				FColor HeatColor;
+				FLinearColor InterpolatedColor;
 
 				if (bDrawHeat)
 				{
 					for (const FTrack& OtherTrack : Tracks)
 					{
+						if(bPregenHeat) continue;
 						for (const FPlayerLocation& OtherLoc : OtherTrack.Locations)
 						{
 							if ( Time >= OtherLoc.TimeStemp && FVector::DistSquared(Start, OtherLoc.Location) <= TrajectoryRadius * TrajectoryRadius)
@@ -277,9 +321,14 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 					}
 
 					float NormalizedDensity = FMath::Clamp(static_cast<float>(CountNearby) / TrajectorySensitivity, 0.f, 1.f);
-					FLinearColor InterpolatedColor = FLinearColor::LerpUsingHSV(ColdColor, HotColor, NormalizedDensity);
-					HeatColor = InterpolatedColor.ToFColor(true);
+					InterpolatedColor = FLinearColor::LerpUsingHSV(ColdColor, HotColor, NormalizedDensity);					
 				}
+
+				if(bPregenHeat)
+				{
+					InterpolatedColor = FLinearColor::LerpUsingHSV(ColdColor, HotColor, TrajectoryHeatMap[TrackCount].NormalizeDistance[i]);
+				}
+				HeatColor = InterpolatedColor.ToFColor(true);
 				
 				DrawDebugDirectionalArrow(
 					World,
@@ -294,6 +343,7 @@ void UEasyTelemetryEditorSubsystem::DrawTrajectory(float Time)
 				);
 			}
 		}
+		TrackCount ++;
 	}
 }
 
@@ -371,7 +421,7 @@ float UEasyTelemetryEditorSubsystem::GetMaxTime()
 	return mMaxTime;
 }
 
-void UEasyTelemetryEditorSubsystem::SetDrawType(DrawType DrawType)
+void UEasyTelemetryEditorSubsystem::SetDrawType(int DrawType)
 {
 	mDrawType = DrawType;
 	Draw();
@@ -386,6 +436,12 @@ void UEasyTelemetryEditorSubsystem::SetDraw(bool pDraw)
 void UEasyTelemetryEditorSubsystem::SetDrawHeat(bool pDrawHeat)
 {
 	bDrawHeat = pDrawHeat;
+	Draw();
+}
+
+void UEasyTelemetryEditorSubsystem::SetPregenHeat(bool _bPregenHeat)
+{
+	bPregenHeat = _bPregenHeat;
 	Draw();
 }
 

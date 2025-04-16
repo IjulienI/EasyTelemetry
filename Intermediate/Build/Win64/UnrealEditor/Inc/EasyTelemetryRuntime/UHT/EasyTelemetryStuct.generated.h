@@ -42,6 +42,13 @@ template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FTimedMec
 
 template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FTrack>();
 
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h_107_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FNormalizeDistance_Statics; \
+	EASYTELEMETRYRUNTIME_API static class UScriptStruct* StaticStruct();
+
+
+template<> EASYTELEMETRYRUNTIME_API UScriptStruct* StaticStruct<struct FNormalizeDistance>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetryRuntime_Structures_EasyTelemetryStuct_h
 

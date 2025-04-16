@@ -10,14 +10,14 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UET_TelemetryWidget;
-enum class DrawType : uint8;
 struct FTrack;
 #ifdef EASYTELEMETRY_EasyTelemetryEditorSubsystem_generated_h
 #error "EasyTelemetryEditorSubsystem.generated.h already included, missing '#pragma once' in EasyTelemetryEditorSubsystem.h"
 #endif
 #define EASYTELEMETRY_EasyTelemetryEditorSubsystem_generated_h
 
-#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetPregenHeat); \
 	DECLARE_FUNCTION(execSetDrawHeat); \
 	DECLARE_FUNCTION(execSetDraw); \
 	DECLARE_FUNCTION(execSetDrawType); \
@@ -32,7 +32,7 @@ struct FTrack;
 	DECLARE_FUNCTION(execLoadData);
 
 
-#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUEasyTelemetryEditorSubsystem(); \
 	friend struct Z_Construct_UClass_UEasyTelemetryEditorSubsystem_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UEasyTelemetryEditorSubsystem)
 
 
-#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UEasyTelemetryEditorSubsystem(); \
 private: \
@@ -55,13 +55,13 @@ public: \
 	NO_API virtual ~UEasyTelemetryEditorSubsystem();
 
 
-#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_15_PROLOG
-#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_GENERATED_BODY \
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_14_PROLOG
+#define FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_INCLASS_NO_PURE_DECLS \
-	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_18_ENHANCED_CONSTRUCTORS \
+	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_INCLASS_NO_PURE_DECLS \
+	FID_TestPlugin_Plugins_EasyTelemetry_Source_EasyTelemetry_Public_EasyTelemetryEditorSubsystem_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
